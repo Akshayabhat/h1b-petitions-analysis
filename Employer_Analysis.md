@@ -68,7 +68,28 @@ Notes: For the top sponsor Infosys, there has been a sharp drop in 2014,
 a peak in 2015 and a drop in 2016. The top 3 employers, Infosys, TCS and
 Wipro haven't filed as many petitions in 2016, as they have in 2015. For
 most employers in this list, we observe a steady increase in the number
-of petitions filed, till 2015.
+of petitions filed, till 2015, but a significant drop in 2016. Let us
+look to see all the petitions filed over the years, to better understand
+this drop.
+
+    h1b %>%
+      group_by(YEAR) %>%
+      summarize(petitions_filed = n())
+
+    ## # A tibble: 6 x 2
+    ##    YEAR petitions_filed
+    ##   <int>           <int>
+    ## 1  2011          358767
+    ## 2  2012          415607
+    ## 3  2013          442114
+    ## 4  2014          519427
+    ## 5  2015          618727
+    ## 6  2016          647803
+
+Notes: Thus we can conclude that, in 2016, the no of petitions filed
+weren't affected, but the ones by top companies, which are Indian,
+reduced significantly. This can be attributed to the US Presidential
+elections and the uncertainity surrounding H1B visas.
 
 For top 10 employers, what percent of petitions got approved?
 =============================================================
